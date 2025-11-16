@@ -29,7 +29,7 @@ jobs:
           context: ./MOVIE-BACKEND
           file: ./MOVIE-BACKEND/backend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/movie-backend-prac:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/backend-movie:latest
 
       - name: Build and push frontend image
         uses: docker/build-push-action@v5
@@ -37,4 +37,4 @@ jobs:
           context: ./MOVIE-FRONTEND
           file: ./MOVIE-FRONTEND/frontend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/movie-frontend-prac:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/frontend-movie:latest
